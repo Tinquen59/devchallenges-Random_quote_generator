@@ -1,0 +1,47 @@
+.qa-BlockQuote {
+    &__container {
+        border-left: 8px solid $secondary-color;
+        padding-left: 4.12em;
+
+        &--isAllQuotes {
+            margin-top: 5.83em;
+            &:last-of-type {
+                margin-bottom: 5.83em;
+            }
+        }
+
+        &--quote {
+            width: $width-quotes;
+            font-size: 36px;
+            line-height: $line-h;
+
+            &::before {
+                content: "“";
+            }
+
+            &::after {
+                content: "”";
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .qa-BlockQuote {
+        &__container {
+            width: $width-quotes-m;
+            padding-left: 2em;
+
+            &--isAllQuotes {
+                margin-top: 5.83em;
+                &:last-of-type {
+                    margin-bottom: 5.83em;
+                }
+            }
+
+            &--quote {
+                width: 100%;
+            }
+        }
+    }
+}

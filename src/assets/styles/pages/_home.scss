@@ -1,0 +1,59 @@
+.qa-Quote {
+    &__container {
+    }
+
+    &__header {
+        text-align: right;
+        padding: 1.29em 4.17em;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:not(.qa-Quote__body--isAllQuotes) {
+            padding-top: 8.17em;
+        }
+
+        &--isAllQuotes {
+            margin-top: 0.47em;
+        }
+    }
+
+    &__isAllQuotes {
+        padding-left: 4.12em;
+        border-left: 8px solid transparent;
+
+        &--author {
+            width: $width-quotes;
+            font-size: 36px;
+            font-variation-settings: "wght" 700;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .qa-Quote {
+        &__body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:not(.qa-Quote__body--isAllQuotes) {
+                padding-top: 8.17em;
+            }
+
+            &--isAllQuotes {
+                margin-top: 0.47em;
+            }
+        }
+
+        &__isAllQuotes {
+            width: $width-quotes-m;
+            padding-left: 2em;
+
+            &--author {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.qa-Loader {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto 100px auto;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    animation: loader 3s linear infinite;
+}
+
+@keyframes loader {
+    0% {
+        border-top-color: $primary-color;
+    }
+    25% {
+        border-right-color: $primary-color;
+    }
+    50% {
+        border-bottom-color: $primary-color;
+    }
+    75% {
+        border-left-color: $primary-color;
+    }
+    100% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}

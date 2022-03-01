@@ -1,0 +1,104 @@
+.qa-Button {
+    &--randomQuote {
+        font-size: 18px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+
+        &:hover span::after {
+            transform: scaleX(1);
+        }
+
+        &:hover .qa-Icon--rotate {
+            color: $secondary-color;
+            transform: rotate(1turn);
+        }
+
+        & .qa-Icon--rotate,
+        & span::after {
+            transition: all 0.3s ease-in-out;
+        }
+
+        & span {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: $secondary-color;
+                transform: scaleX(0);
+            }
+        }
+
+        & .qa-Icon--rotate {
+            font-size: 22px;
+            margin-left: 0.5em;
+        }
+    }
+
+    &--big {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 672px;
+        padding: 2.08em 1.62em 2.08em 1.21em;
+        font-size: 24px;
+        border: none;
+        background-color: #fff;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background-color: $primary-color;
+
+            & .qa-ButtonBig {
+                &--quoteAuthor {
+                    color: $white-color;
+                }
+
+                &--rightArrow {
+                    visibility: visible;
+                    transform: translateX(0%);
+                }
+            }
+        }
+
+        &.qa-ButtonBig__container {
+            margin-top: 4.54em;
+            margin-bottom: 2em;
+        }
+
+        & .qa-ButtonBig {
+            &--quoteAuthor,
+            &--quoteGenre {
+                display: block;
+                text-align: left;
+            }
+
+            &--quoteAuthor {
+                font-variation-settings: "wght" 700;
+                line-height: 1.17em;
+                color: $primary-color;
+                transition: color 0.3s ease-in-out;
+            }
+
+            &--quoteGenre {
+                margin-top: 0.57em;
+                font-size: 14px;
+                line-height: 1.14em;
+                color: $third-color;
+            }
+
+            &--rightArrow {
+                visibility: hidden;
+                font-size: 38px;
+                color: $white-color;
+                transform: translateX(-100%);
+                transition: visibility 0.3s ease-in-out,
+                    transform 1s ease-in-out;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.81em;
+    font-family: "Montserrat regular";
+    text-align: center;
+    color: $third-color;
+
+    & > p {
+        font-size: 14px;
+
+        & .qa-Footer--link {
+            font-family: "Montserrat bold";
+            font-variation-settings: "wght" 700;
+            text-decoration: underline;
+            color: $third-color;
+        }
+    }
+}
